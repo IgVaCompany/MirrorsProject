@@ -6,4 +6,7 @@ public class Params : MonoBehaviour
 {
     public static bool visib = false;
     public static bool work = false;
+    public static bool flagB1 = false;
+    public static bool flagB2 = false;
+    public static bool flagB3 = false;
 }

@@ -5,15 +5,11 @@ using UnityEngine.Experimental.UIElements;
 
 public class PushButton : MonoBehaviour {
 
-    public  GameObject objects;
-
-    public void Click()
-    {
-        Debug.Log("Hello");
-        float rand1 = Random.Range(-50,50);
-        float rand2 = Random.Range(-50, 50);
-        Instantiate(objects, new Vector3(rand1,rand2,0), Quaternion.identity);
-        Params.work = false;
+    public void ClickB1()
+    {       
+        Params.flagB1 = true;
+        Params.flagB2 = false;
+        Params.flagB3 = false;
     }
 
     public void MousePos()
@@ -27,8 +23,20 @@ public class PushButton : MonoBehaviour {
                 Debug.Log(x);
                 Debug.Log(y);
                 Params.work = true;               
-            }
-       
-        
+            }       
+    }
+
+    public void ClickB2()
+    {
+        Params.flagB1 = false;
+        Params.flagB2 = true;
+        Params.flagB3 = false;
+    }
+
+    public void ClickB3()
+    {
+        Params.flagB1 = false;
+        Params.flagB2 = false;
+        Params.flagB3 = true;
     }
 }
