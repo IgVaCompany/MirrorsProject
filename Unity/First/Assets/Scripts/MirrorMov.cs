@@ -17,6 +17,7 @@ public class MirrorMov : MonoBehaviour
     {
         mouseDown = false;
         Debug.Log("Hello2");
+        
     }
 
     void OnMouseDrag()
