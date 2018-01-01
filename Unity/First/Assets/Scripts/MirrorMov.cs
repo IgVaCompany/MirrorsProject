@@ -10,13 +10,13 @@ public class MirrorMov : MonoBehaviour
     void OnMouseDown()
     {
         mouseDown = true;
-        Debug.Log("Hello1");
+        Debug.Log("OnMouseDown is completed");
     }
 
     void OnMouseUp()
     {
         mouseDown = false;
-        Debug.Log("Hello2");
+        Debug.Log("OnMouseUp is completed");
         
     }
 
