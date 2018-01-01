@@ -5,6 +5,7 @@ using UnityEngine;
 public class MirrorMov : MonoBehaviour
 {
     bool mouseDown = false;
+    private Renderer ren;
     Vector3 cursor =new Vector3();
 
     void OnMouseDown()
@@ -20,17 +21,35 @@ public class MirrorMov : MonoBehaviour
         
     }
 
+    void OnMouseExit()
+    {
+        ren.material.color = new Color(255,255,255);
+    }
     void OnMouseDrag()
     {
+        ren = GetComponent<Renderer>();
         cursor = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        transform.rotation = Quaternion.Euler(cursor);
+        cursor.z = 0;
+        ren.material.color = new Color(1,0,0);        
+        this.transform.position = cursor;
 
-        //cursor = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        //cursor.z = 0;
-        //if (Input.GetMouseButtonDown(0))
-        //{
-        //    this.transform.position = cursor;
-        //}
+        if (Input.GetKey(KeyCode.A))
+        {
+            Debug.Log("A");
+            transform.Rotate(new Vector3(0,0,10f*Time.deltaTime));
+            new Quaternion();
+        }
+        if (Input.GetKey(KeyCode.D))
+        {
+            Debug.Log("D");
+        }
+
+
+    }
+
+    void OnCollisionEnter2D()
+    {
+        Destroy(this.gameObject);
     }
     // Use this for initialization
     void Start () {
@@ -40,12 +59,6 @@ public class MirrorMov : MonoBehaviour
 	// Update is called once per frame
 	void Update ()
 	{
-      
-	    //Vector3 cursor = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-	    //cursor.z = 0;
-	    //if (Input.GetMouseButtonDown(0))
-	    //{
-	    //    this.transform.position = cursor;
-	    //}
+      	   
 	}
 }

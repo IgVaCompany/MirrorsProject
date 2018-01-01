@@ -8,7 +8,8 @@ public class Making : MonoBehaviour {
     public GameObject objectsB2;
     public GameObject objectsB3;
 
-     Vector3 mosPos;
+   public  Vector3 mosPos;
+    
     // Use this for initialization
     void Start () {
 		
