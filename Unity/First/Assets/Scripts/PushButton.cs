@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.Experimental.UIElements;
 
 public class PushButton : MonoBehaviour {
-
+   
     public void ClickB1()
     {       
         Params.flagB1 = true;
@@ -38,5 +38,11 @@ public class PushButton : MonoBehaviour {
         Params.flagB1 = false;
         Params.flagB2 = false;
         Params.flagB3 = true;
+        Params.work = false;
+       
+
     }
+
+    
+
 }

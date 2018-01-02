@@ -9,4 +9,5 @@ public class Params : MonoBehaviour
     public static bool flagB1 = false;
     public static bool flagB2 = false;
     public static bool flagB3 = false;
+    public static  List<GameObject> mirrorsList = new List<GameObject>();  
 }
