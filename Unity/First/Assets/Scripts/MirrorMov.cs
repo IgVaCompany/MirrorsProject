@@ -6,6 +6,8 @@ public class MirrorMov : MonoBehaviour
 {
     bool mouseDown = false;
     private Renderer ren;
+    private float speed = 10f;
+    private float speedAdd = 20f;
     Vector3 cursor =new Vector3();
 
     void OnMouseDown()
@@ -31,14 +33,15 @@ public class MirrorMov : MonoBehaviour
         cursor = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         cursor.z = 0;
         ren.material.color = new Color(1,0,0);        
-        this.transform.position = cursor;
+        this.transform.position = cursor;      
 
         if (Input.GetKey(KeyCode.A))
         {
             Debug.Log("A");
-            transform.Rotate(new Vector3(0,0,10f*Time.deltaTime));
+            transform.Rotate(new Vector3(0,0,(speed)*Time.deltaTime));
             new Quaternion();
         }
+        
         if (Input.GetKey(KeyCode.D))
         {
             Debug.Log("D");
@@ -47,10 +50,7 @@ public class MirrorMov : MonoBehaviour
 
     }
 
-    void OnCollisionEnter2D()
-    {
-        Destroy(this.gameObject);
-    }
+    
     // Use this for initialization
     void Start () {
 		
