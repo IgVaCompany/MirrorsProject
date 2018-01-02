@@ -18,28 +18,30 @@ public class MirrorMov : MonoBehaviour
     void OnMouseDown()
     {
         mouseDown = true;
-        Debug.Log("OnMouseDown is completed");
+       // Debug.Log("OnMouseDown is completed");
     }
 
     void OnMouseUp()
     {
         mouseDown = false;
-        Debug.Log("OnMouseUp is completed");
+       // Debug.Log("OnMouseUp is completed");
         
     }
 
     void OnMouseEnter()
     {
+        Params.work = true;
         ren.material.color = hoverColor;
     }
 
     void OnMouseExit()
     {
         ren.material.color = basicColor;
+        Params.work = false;
     }
     void OnMouseDrag()
     {
-        Params.work = true;
+        
         ren = GetComponent<Renderer>();
         cursor = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         cursor.z = 0;
