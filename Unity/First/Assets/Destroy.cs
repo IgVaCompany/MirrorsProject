@@ -1,25 +1,37 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 
-public class Destroy : MonoBehaviour {
+public class Destroy : MonoBehaviour
+{
+    public GameObject Laser;
+    private Button but;
 
-    
-    void OnTriggerEnter(Collider other)
+    void Start()
     {
-       
-        Debug.Log("Enter");
-        //   Destroy(other.gameObject);
+        but = Laser.GetComponent<Button>();
     }
-    void OnTriggerStay(Collider other)
+
+    void Update()
     {
-        Debug.Log("Stay");
-        //   Destroy(other.gameObject);
+        
     }
-    void OnTriggerExit(Collider other)
+
+    void OnTriggerEnter2D(Collider2D other)
     {
-        Debug.Log("Exit");
-        //   Destroy(other.gameObject);
+        if (other.tag == "Laser")
+        {
+            but.interactable = true;
+            Params.laserOn = false;
+            Params.workLaser = false;
+            Params.flagB2 = false;
+        }
+          
+
+        Debug.Log("Enter");     
+        Destroy(other.gameObject);
     }
+   
 }

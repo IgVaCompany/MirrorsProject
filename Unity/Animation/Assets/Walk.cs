@@ -8,7 +8,7 @@ public class Walk : MonoBehaviour
     public bool go = false;
     public bool direct = false;
     private SpriteRenderer ren;
-    private Animator anim;
+    public Animation anim;
 
 	// Use this for initialization
 	void Start ()
@@ -16,7 +16,7 @@ public class Walk : MonoBehaviour
 
 	    ren = GetComponent<SpriteRenderer>();
 	    ren.flipX = direct;
-	    anim = GetComponent<Animator>();
+	    anim = GetComponent<Animation>();
 	}
 	
 	// Update is called once per frame
@@ -27,6 +27,7 @@ public class Walk : MonoBehaviour
 
     void FixedUpdate()
     {
+        anim.Play("go");
         if (Input.GetKey(KeyCode.A))
         {
             go = true;
@@ -34,7 +35,8 @@ public class Walk : MonoBehaviour
             //  anim.GetParameter();
             //ren.flipX = false;
             ren.flipX = direct;
-
+           // anim.CrossFade("go");
+            //  anim.CrossFade("New Animation",10f );
         }
         else if (Input.GetKey(KeyCode.D))
         {
@@ -42,6 +44,7 @@ public class Walk : MonoBehaviour
             direct = true;
             // ren.flipX = true;
             ren.flipX = direct;
+           // anim.CrossFade("New Animation 1", 10f);
         }
     }
 }

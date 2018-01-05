@@ -219,7 +219,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\ButtonCorrect.cs" />
     <Compile Include="Assets\Destroy.cs" />
+    <Compile Include="Assets\Scripts\Laser.cs" />
     <Compile Include="Assets\Scripts\Making.cs" />
     <Compile Include="Assets\Scripts\MirrorMov.cs" />
     <Compile Include="Assets\Scripts\Params.cs" />
