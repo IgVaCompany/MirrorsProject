@@ -11,8 +11,10 @@ public class Params : MonoBehaviour
     public static bool flagB2 = false;
     public static bool flagB3 = false;
     public static bool laserOn = false;
-    public static  List<GameObject> mirrorsList = new List<GameObject>();  
 
+    public static  List<GameObject> mirrorsList = new List<GameObject>();
+
+    public static GameObject[] Mirrors;
     public static List<double> X1  = new List<double>();
     public static List<double> Y1  = new List<double>();
     public static List<double> X2 = new List<double>();

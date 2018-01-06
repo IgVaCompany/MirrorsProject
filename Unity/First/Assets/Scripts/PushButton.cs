@@ -30,6 +30,15 @@ public class PushButton : MonoBehaviour
         mirror.SetActive(true);
     }
 
+    public void PrepeirToCalc()
+    {
+        MirToPionts.MirToCoord();
+    }
+
+    public void Quit()
+    {
+        Application.Quit();
+    }
     
 
 }
