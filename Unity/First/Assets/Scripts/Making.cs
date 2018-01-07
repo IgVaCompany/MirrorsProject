@@ -40,6 +40,7 @@ public class Making : MonoBehaviour {
         {
             mosPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             Instantiate(objectsB3, new Vector3(mosPos.x, mosPos.y, 0), Quaternion.identity);
+            
            // Params.mirrorsList.Add(gameObject);
             Debug.Log(Params.mirrorsList.ToArray().Length);
         }

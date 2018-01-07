@@ -11,6 +11,7 @@ public class Params : MonoBehaviour
     public static bool flagB2 = false;
     public static bool flagB3 = false;
     public static bool laserOn = false;
+    public static bool fromfile = false;
 
     public static  List<GameObject> mirrorsList = new List<GameObject>();
 
