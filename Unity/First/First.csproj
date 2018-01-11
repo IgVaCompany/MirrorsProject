@@ -225,6 +225,7 @@
     <Compile Include="Assets\Scripts\FromFile.cs" />
     <Compile Include="Assets\Scripts\FunnyShow.cs" />
     <Compile Include="Assets\Scripts\Laser.cs" />
+    <Compile Include="Assets\Scripts\LaserToPoint.cs" />
     <Compile Include="Assets\Scripts\Making.cs" />
     <Compile Include="Assets\Scripts\MirrorMov.cs" />
     <Compile Include="Assets\Scripts\MirToPionts.cs" />

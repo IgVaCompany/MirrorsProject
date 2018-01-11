@@ -21,4 +21,6 @@ public class Params : MonoBehaviour
     public static List<double> X2 = new List<double>();
     public static List<double> Y2 = new List<double>();
 
+    public static double laserX1, laserX2, laserY1, laserY2;
+
 }

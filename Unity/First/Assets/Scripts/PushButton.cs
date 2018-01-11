@@ -52,6 +52,7 @@ public class PushButton : MonoBehaviour
 
     public void PrepeirToCalc()
     {
+        LaserToPoint.LaserToCoord();
         MirToPionts.MirToCoord();
     }
 
